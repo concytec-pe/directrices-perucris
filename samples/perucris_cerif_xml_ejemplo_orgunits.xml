@@ -2,13 +2,13 @@
 <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd  https://www.openaire.eu/cerif-profile/1.1/ https://www.openaire.eu/schema/cris/current/openaire-cerif-profile.xsd
 https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profile/1.0/perucris-cerif-profile.xsd">
 	<responseDate>2020-01-12T14:00:00Z</responseDate>
-	<request metadataPrefix="cerif_perucris" verb="ListRecords" set="perucris_cris_orgunits">http://cris.example.org/oai/request</request>
+	<request metadataPrefix="cerif_perucris" verb="ListRecords" set="perucris_cris_orgunits">https://cris.example.org/oai/request</request>
 	<ListRecords>
     <record>
       <header>
         <identifier>oai:cris.example.org:349876</identifier>
-        <datestamp>2018-01-07T14:00:00Z</datestamp>
-        <setSpec>perucris_cris_orgunits</setSpec>
+        <datestamp>2021-01-05T14:00:00Z</datestamp>
+        <setSpec>perucris_orgunits</setSpec>
       </header>
       <metadata>
         <OrgUnit xmlns="https://www.openaire.eu/cerif-profile/1.1/" xmlns:perucris="https://purl.org/pe-repo/cerif-profile/1.0/" id="349876"><!-- Unidad Organizativa principal-->
@@ -22,7 +22,7 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
             <PostalCode>13011</PostalCode>
             <AddressCountry>PE</AddressCountry>
           </PostAddress>
-          <perucris:UbiGeo scheme="https://purl.org/pe-repo/inei/ubigeo">1301</perucris:UbiGeo>
+          <perucris:UbiGeo scheme="https://purl.org/pe-repo/inei/ubigeo">https://purl.org/pe-repo/inei/ubigeo#1301</perucris:UbiGeo>
           <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20172557628</Identifier><!-- RUC-->
           <Identifier type="https://w3id.org/cerif/vocab/IdentifierTypes#RORID">001b4cb05</Identifier><!-- ROR-->
           <Identifier type="https://w3id.org/cerif/vocab/IdentifierTypes#ISNI">0000000122239184</Identifier><!-- ISNI-->
@@ -31,8 +31,8 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
           <Type scheme="https://purl.org/pe-repo/sunedu/tipoInstitucion">https://purl.org/pe-repo/sunedu/tipoInstitucion#06</Type><!-- Tipo de institución de enseñanza superior: universidad-->
           <Type scheme="https://purl.org/pe-repo/inei/ciiu">8530</Type><!-- CIIU: enseñanza superior-->
           <Subject scheme="https://purl.org/pe-repo/ocde/ford">https://purl.org/pe-repo/ocde/ford#5.03.02</Subject>
-          <Type scheme="https://purl.org/pe-repo/concytec/terminos ">https://purl.org/pe-repo/concytec/terminos#publica</Type><!-- Naturaleza: pública-->
-          <ElectronicAddress>http://www.unitru.edu.pe/</ElectronicAddress>
+          <Type scheme="https://purl.org/pe-repo/ocde/naturalezaInstitucion">https://purl.org/pe-repo/ocde/naturalezaInstitucion#publica</Type><!-- Naturaleza: pública-->
+          <ElectronicAddress>https://www.unitru.edu.pe/</ElectronicAddress>
         </OrgUnit>
       </metadata>
     </record>
@@ -43,7 +43,7 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
       <setSpec>perucris_cris_orgunits</setSpec>
     </header>
     <metadata>
-      <OrgUnit xmlns="https://www.openaire.eu/cerif-profile/1.1/" xmlns:perucris="https://purl.org/pe-repo/cerif-profile/1.0/" id="349877"><!-- Unidad organizativa; dependencia-->
+      <OrgUnit xmlns="https://www.openaire.eu/cerif-profile/1.1/" xmlns:perucris="https://purl.org/pe-repo/cerif-profile/1.0/" id="349877"><!-- Unidad organizativa: dependencia-->
        <Name xml:lang="es">Dirección Regional de Salud Loreto</Name>
        <Acronym>DIRESA-Trujillo</Acronym>
        <PostAddress>
@@ -54,14 +54,14 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
         <PostalCode>16001</PostalCode>
         <AddressCountry>PE</AddressCountry>
         </PostAddress>
-        <perucris:UbiGeo scheme="https://purl.org/pe-repo/inei/ubigeo">1601</perucris:UbiGeo>
+        <perucris:UbiGeo scheme="https://purl.org/pe-repo/inei/ubigeo">https://purl.org/pe-repo/inei/ubigeo#1601</perucris:UbiGeo>
         <PartOf>
           <OrgUnit id="3298975">
            <Name xml:lang="es">Gobierno Regional de Loreto</Name>
            <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20493196902</Identifier><!-- RUC-->
           </OrgUnit>
          </PartOf>
-         <Type scheme="https://purl.org/pe-repo/concytec/terminos">https://purl.org/pe-repo/concytec/terminos#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia-->
+         <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia-->
          <Keyword>Salud</Keyword>
          <Keyword>Servicios de salud</Keyword>
          <ElectronicAddress>http://www.diresaloreto.gob.pe/portalweb/</ElectronicAddress>
@@ -75,7 +75,7 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
       <setSpec>perucris_cris_orgunits</setSpec>
     </header>
     <metadata>
-      <OrgUnit xmlns="https://www.openaire.eu/cerif-profile/1.1/" xmlns:perucris="https://purl.org/pe-repo/cerif-profile/1.0/" id="349879"><!-- Unidad organizativa; dependencia con otra dependencia incluida-->
+      <OrgUnit xmlns="https://www.openaire.eu/cerif-profile/1.1/" xmlns:perucris="https://purl.org/pe-repo/cerif-profile/1.0/" id="349879"><!-- Unidad organizativa: dependencia con otra dependencia incluida-->
        <Name xml:lang="es">Laboratorio de Biología Marina</Name>
         <PostAddress>
         <StreetAddress>Av. Honorio Delgado 430 Urb Ingeniería</StreetAddress>
@@ -85,11 +85,11 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
         <PostalCode>15102</PostalCode>
         <AddressCountry>PE</AddressCountry>
         </PostAddress>
-        <perucris:UbiGeo scheme="https://purl.org/pe-repo/inei/ubigeo">150135</perucris:UbiGeo>
+        <perucris:UbiGeo scheme="https://purl.org/pe-repo/inei/ubigeo">https://purl.org/pe-repo/inei/ubigeo#150135</perucris:UbiGeo>
         <PartOf>
           <OrgUnit id="329897">
            <Name xml:lang="es">Facultad de Ciencias y Filosofía</Name>
-           <Type scheme="https://purl.org/pe-repo/concytec/terminos">https://purl.org/pe-repo/concytec/terminos#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia-->
+           <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia-->
            <PartOf>
             <OrgUnit id="387549">
               <Name xml:lang="es">Universidad Peruana Cayetano Heredia</Name>
@@ -98,12 +98,12 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
               <Type scheme="https://purl.org/pe-repo/sunedu/tipoInstitucion">https://purl.org/pe-repo/sunedu/tipoInstitucion#06</Type><!-- Tipo de institución de enseñanza superior: universidad-->
               <Type scheme="https://purl.org/pe-repo/inei/ciiu">8530</Type><!-- CIIU: enseñanza superior-->
               <Subject scheme="https://purl.org/pe-repo/ocde/ford">https://purl.org/pe-repo/ocde/ford#5.03.02</Subject>
-              <Type scheme="https://purl.org/pe-repo/concytec/terminos ">https://purl.org/pe-repo/concytec/terminos#publica</Type><!-- Naturaleza: pública-->
+              <Type scheme="https://purl.org/pe-repo/ocde/naturalezaInstitucion">https://purl.org/pe-repo/ocde/naturalezaInstitucion#publica</Type><!-- Naturaleza: pública-->
             </OrgUnit>
            </PartOf>
           </OrgUnit>
          </PartOf>
-         <Type scheme="https://purl.org/pe-repo/concytec/terminos">https://purl.org/pe-repo/concytec/terminos#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia-->
+         <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia-->
          <Subject scheme="https://purl.org/pe-repo/ocde/ford">https://purl.org/pe-repo/ocde/ford#1.06.12</Subject><!-- Área OCDE-->
          <Keyword>Salud</Keyword>
          <Keyword>Servicios de salud</Keyword>
@@ -130,7 +130,7 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
            <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20169004359</Identifier><!-- RUC-->
           </OrgUnit>
          </PartOf>
-         <Type scheme="https://purl.org/pe-repo/concytec/terminos">https://purl.org/pe-repo/concytec/terminos#grupoDeInvestigacion</Type><!-->Tipo de dependencia-->
+         <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#grupoDeInvestigacion</Type><!-->Tipo de dependencia-->
          <Subject scheme="https://purl.org/pe-repo/ocde/ford">https://purl.org/pe-repo/ocde/ford#2.05.01</Subject><!-- Área OCDE-->
          <Keyword>Ingeniería de materiales</Keyword>
          <Keyword>Materiales avanzados</Keyword>
@@ -155,7 +155,7 @@ https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profi
            <Identifier type="https://w3id.org/cerif/vocab/IdentifierTypes#RORID">00013q465</Identifier><!-- ROR-->
           </OrgUnit>
          </PartOf>
-         <Type scheme="https://purl.org/pe-repo/concytec/terminos">https://purl.org/pe-repo/concytec/terminos#lineaDeInvestigacion</Type><!-->Tipo de dependencia-->
+         <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#lineaDeInvestigacion</Type><!-->Tipo de dependencia-->
          <Subject scheme="https://purl.org/pe-repo/ocde/ford">https://purl.org/pe-repo/ocde/ford#1.05.08</Subject><!-- Área OCDE-->
          <Keyword>Ciencias de la tierra</Keyword>
          <Keyword>Medio ambiente</Keyword>

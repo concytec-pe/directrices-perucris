@@ -28,7 +28,6 @@
               <excludes>
                 <!-- <exclude>_schematron_output/*.xml</exclude> -->
                 <exclude>**/desktop.ini</exclude>
-                <exclude>**/perucris*.*</exclude>
               </excludes>
             </validationSet>
             <validationSet>

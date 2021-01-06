@@ -83,12 +83,63 @@
           <xs:documentation>The subject classification(s) of the project</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element cflink:attribute="https://w3id.org/cerif/model#OrganisationUnit.Keywords" maxOccurs="unbounded" minOccurs="0" name="Keyword" type="cfMLangString__Type">
+        <xs:annotation>
+          <xs:documentation>Palabra clave o expresión clave que caracteriza la unidad organizativa.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PostAddress" minOccurs="0" maxOccurs="1" cflink:entity="https://w3id.org/cerif/model#PostAddress">
+        <xs:annotation>
+          <xs:documentation>El lugar de domicilio de la unidad organizativa o dependencia. </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence minOccurs="0">
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.AddressLine1" maxOccurs="1" minOccurs="0" name="StreetAddress" type="cfString__Type">
+                <xs:annotation>
+                  <xs:documentation>El nombre de la calle y el número donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.CityTown" maxOccurs="1" minOccurs="0" name="AddressLocality" type="cfString__Type">
+                <xs:annotation>
+                  <xs:documentation>El nombre del distrito donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="AddressProvince" type="cfString__Type">
+                <xs:annotation>
+                  <xs:documentation>El nombre de la provincia donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.StateOfCountry" maxOccurs="1" minOccurs="0" name="AddressRegion" type="cfString__Type">
+                <xs:annotation>
+                  <xs:documentation>El nombre del departamento donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.PostCode" maxOccurs="1" minOccurs="0" name="PostalCode" type="cfString__Type">
+                <xs:annotation>
+                  <xs:documentation>El código postal donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.CountryCode" maxOccurs="1" minOccurs="0" name="AddressCountry" type="cfString__Type">
+                <xs:annotation>
+                  <xs:documentation>El código ISO 3166 (2 caracteres) del país donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element cflink:link="https://w3id.org/cerif/model#OrganisationUnit_Classification(https://purl.org/pe-repo/inei/ubigeo)" maxOccurs="1" minOccurs="0" name="UbiGeo" type="cfGenericURIClassification__Type">
+        <xs:annotation>
+          <xs:documentation>La localización de la unidad organizativa o dependencia, según UbiGeo de INEI.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element cflink:attribute="https://w3id.org/cerif/model#OrganisationUnit.Description" maxOccurs="unbounded" minOccurs="0" name="Description" type="cfMLangString__Type">
+        <xs:annotation>
+          <xs:documentation>Información que describe o caracteriza a esta Unidad Organizativa o dependencia.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </Entity>
 
     <Entity uri="https://w3id.org/cerif/model#ElectronicAddress">
-    </Entity>
-
-    <Entity uri="https://w3id.org/cerif/model#PostAddress">
     </Entity>
 
     <Entity uri="https://w3id.org/cerif/model#Project" leaveOut="Costs Funders Originated Funded/From">

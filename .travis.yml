@@ -2,13 +2,15 @@
 
 sudo: false
 
+before_install:
+- git clone https://github.com/eurocris/CERIF-TG-Tools.git ../CERIF-TG-Tools
+
 language: java
 
 jdk:
-  - oraclejdk9
+    - openjdk8
 
 install: true
 
 script:
-    # this runs two Maven goals: transform and validate
-    - travis_wait mvn test -B
+    - travis_wait ./tools/compile.sh

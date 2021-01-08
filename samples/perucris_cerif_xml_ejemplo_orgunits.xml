@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profile/1.0/perucris-cerif-profile.xsd">
-   <responseDate>2020-01-12T14:00:00Z</responseDate>
+   <responseDate>2021-01-12T14:00:00Z</responseDate>
    <request metadataPrefix="cerif_perucris" verb="ListRecords" set="perucris_orgunits">https://cris.example.org/oai/request</request>
    <ListRecords>
       <record>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd https://purl.org/pe-repo/cerif-profile/1.0/ https://purl.org/pe-repo/cerif-profile/1.0/perucris-cerif-profile.xsd">
+   <responseDate>2021-01-12T14:00:00Z</responseDate>
+   <request metadataPrefix="cerif_perucris" verb="ListRecords" set="perucris_fundings">https://cris.example.org/oai/request</request>
+   <ListRecords>
+      <record>
+         <header>
+            <identifier>oai:cris.example.org:612347</identifier>
+            <datestamp>2021-01-05T14:29:24Z</datestamp>
+            <setSpec>perucris_fundings</setSpec>
+         </header>
+         <metadata>
+            <Funding xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="612347">
+               <Type xmlns="https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types">https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types#Grant</Type>
+               <!--Grant-->
+               <Acronym>COVID-19</Acronym>
+               <Name xml:lang="es">Entendiendo el trabajo remoto durante la COVID-19: Un estudio sobre contextos laborales (demandas y recursos), necesidades psicológicas básicas, funcionamiento laboral y bienestar/malestar de los trabajadores</Name>
+               <Amount currency="PEN">171500</Amount><!-->Monto programado-->
+               <Identifier type="https://w3id.org/cerif/vocab/IdentifierTypes#AwardNumber">075-2020-FONDECYT</Identifier>
+               <Description xml:lang="es">Las medidas de emergencia como el aislamiento social y confinamiento debido al COVID-19 han afectado la salud física y emocional de los trabajadores que realizan trabajo remoto, agudizando sus problemas de salud, desórdenes ansiosos y depresivos.</Description>
+               <Keyword xml:lang="es">Covid-19</Keyword>
+               <Keyword xml:lang="es">Trabajo remoto</Keyword>
+               <Keyword xml:lang="es">Trabajadores</Keyword>
+               <Keyword xml:lang="es">Aspectos piscoloógicos</Keyword>
+               <Funder>
+                  <OrgUnit id="135871">
+                     <Acronym>FONDECYT</Acronym>
+                     <Name xml:lang="es">Fondo Nacional de Desarrollo Científico, Tecnológico y de Innovación Tecnológica</Name>
+                     <Identifier type="https://w3id.org/cerif/vocab/IdentifierTypes#FundRefID">http://dx.doi.org/10.13039/501100010751</Identifier>
+                  </OrgUnit>
+               </Funder>
+               <PartOf>
+                  <Funding id="875244">
+                     <Type xmlns="https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types">https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types#FundingProgramme</Type><!--Funding Programme-->
+                     <Name xml:lang="es">Proyectos Especiales: Respuesta al COVID-19</Name>
+                  </Funding>
+               </PartOf>
+               <Duration startDate="2020-03-01" endDate="2020-12-31" />
+               <OAMandate mandated="true" startDate="2008-08-20" uri="https://www.fondecyt.gob.pe/documentos/politica_de_acceso_abierto_Fondecyt.pdf" />
+               <ExecutedAmount currency="PEN">169000</ExecutedAmount><!-->Monto ejecutado al cierre del financiamiento-->
+            </Funding>
+         </metadata>
+      </record>
+   </ListRecords>
+</OAI-PMH>

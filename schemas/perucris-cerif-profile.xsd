@@ -4,20 +4,19 @@
 <xs:documentation>Esquema XML Schema del perfil CERIF PerúCRIS 1.0, 
       material complementario para las "Directrices de la Red Nacional de Información en Ciencia, Tecnología e Innovación Tecnológica para administradores de sistemas de gestión de información científica" versión 1.0.
       Este trabajo se deriva de las OpenAIRE Guidelines for CRIS Managers 1.1 (http://openaire-guidelines-for-cris-managers.readthedocs.io/en/latest/index.html), publicadas bajo una licencia Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/).. 
-      Este trabajo tiene la licencia Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/).
-    </xs:documentation>
+      Este trabajo tiene la licencia Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/).</xs:documentation>
 <xs:appinfo>
-            
-            <sch:ns xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" prefix="pecf" uri="https://purl.org/pe-repo/cerif-profile/1.0/"/>
-        </xs:appinfo>
+         
+         <sch:ns xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" prefix="pecf" uri="https://purl.org/pe-repo/cerif-profile/1.0/"/>
+      </xs:appinfo>
 <xs:appinfo>
-           <sch:pattern xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+         <sch:pattern xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
 <sch:title>Occurrence of "uri" implies an OAMandate is mandated</sch:title>
 <sch:rule context="pecf:OAMandate">
 <sch:report test="@uri and not ( @mandated = 'true' )">If the URI of an Open Access policy is given, "mandated" must be set true</sch:report>
-              </sch:rule>
-           </sch:pattern>
-        </xs:appinfo>
+            </sch:rule>
+         </sch:pattern>
+      </xs:appinfo>
 </xs:annotation>
 
 	
@@ -265,7 +264,7 @@ In the research information domain Organisation Units typically represents:
 
 <xs:element cflink:entity="https://w3id.org/cerif/model#PostAddress" minOccurs="0" name="PostAddress">
 <xs:annotation>
-<xs:documentation>El lugar de domicilio de la unidad organizativa o dependencia. </xs:documentation>
+<xs:documentation>El lugar de domicilio de la unidad organizativa o dependencia.</xs:documentation>
 </xs:annotation>
 <xs:complexType>
 <xs:sequence minOccurs="0">
@@ -670,6 +669,12 @@ The Project entity only captures details of the project scope and plan. Informat
 <xs:attributeGroup ref="cfStartDateEndDate__AttributeGroup"/>
 <xs:attributeGroup ref="cfExtension__AttributeGroup"/>
 </xs:complexType>
+</xs:element>
+
+<xs:element minOccurs="0" name="ExecutedAmount" type="cfAmount__Type">
+<xs:annotation>
+<xs:documentation>El monto ejecutado al cierre del financiamiento y su moneda.</xs:documentation>
+</xs:annotation>
 </xs:element>
 
 <xs:group ref="__TheRestGroup"/>

@@ -10,7 +10,7 @@
             <setSpec>perucris_orgunits</setSpec>
          </header>
          <metadata>
-            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="349876"><!-- Unidad Organizativa principal -->
+            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="OrgUnits/349876"><!-- Unidad Organizativa principal -->
                <Type scheme="https://purl.org/pe-repo/ocde/sectorInstitucional">https://purl.org/pe-repo/ocde/sectorInstitucional#ensenanzaSuperior</Type><!-- Sector institucional OCDE: Enseñanza superior -->
                <Type scheme="https://purl.org/pe-repo/sunedu/tipoInstitucion">https://purl.org/pe-repo/sunedu/tipoInstitucion#06</Type><!-- Tipo de institución de enseñanza superior: universidad -->
                <Type scheme="https://purl.org/pe-repo/inei/ciiu">8530</Type><!-- CIIU: enseñanza superior -->
@@ -42,13 +42,13 @@
             <setSpec>perucris_cris_orgunits</setSpec>
          </header>
          <metadata>
-            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="349877"><!-- Unidad organizativa: dependencia -->
+            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="OrgUnits/349877"><!-- Unidad organizativa: dependencia -->
                <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia -->
                <Acronym>DIRESA-Trujillo</Acronym>
                <Name xml:lang="es">Dirección Regional de Salud Loreto</Name>
                <ElectronicAddress>http://www.diresaloreto.gob.pe/portalweb/</ElectronicAddress>
                <PartOf>
-                  <OrgUnit id="3298975">
+                  <OrgUnit id="OrgUnits/3298975">
                      <Name xml:lang="es">Gobierno Regional de Loreto</Name>
                      <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20493196902</Identifier><!-- RUC -->
                   </OrgUnit>
@@ -74,18 +74,18 @@
             <setSpec>perucris_cris_orgunits</setSpec>
          </header>
          <metadata>
-            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="349879"><!-- Unidad organizativa: dependencia con otra dependencia incluida -->
+            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="OrgUnits/349879"><!-- Unidad organizativa: dependencia con otra dependencia incluida -->
                <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia -->
                <Name xml:lang="es">Laboratorio de Biología Marina</Name>
                <PartOf>
-                  <OrgUnit id="329897">
+                  <OrgUnit id="OrgUnits/329897">
                      <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#unidadDeInvestigacionOInnovacion</Type><!-- Tipo de dependencia -->
                      <Name xml:lang="es">Facultad de Ciencias y Filosofía</Name>
                      <ElectronicAddress>https://facien.cayetano.edu.pe/investigacion-lid/lista-de-laboratorios-de-investigacion-y-desarrollo/161-laboratorio-de-biologia-marina</ElectronicAddress>
                      <ElectronicAddress>mailto:yuhooker@gmail.com</ElectronicAddress>
                      <ElectronicAddress>mailto:juan.valqui@upch.pe</ElectronicAddress>
                      <PartOf>
-                        <OrgUnit id="387549">
+                        <OrgUnit id="OrgUnits/387549">
                            <Type scheme="https://purl.org/pe-repo/ocde/sectorInstitucional">https://purl.org/pe-repo/ocde/sectorInstitucional#ensenanzaSuperior</Type><!-- Sector institucional OCDE: Enseñanza superior -->
                            <Type scheme="https://purl.org/pe-repo/sunedu/tipoInstitucion">https://purl.org/pe-repo/sunedu/tipoInstitucion#06</Type><!-- Tipo de institución de enseñanza superior: universidad -->
                            <Type scheme="https://purl.org/pe-repo/inei/ciiu">8530</Type><!-- CIIU: enseñanza superior -->
@@ -120,13 +120,13 @@
             <setSpec>perucris_cris_orgunits</setSpec>
          </header>
          <metadata>
-            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="349890"><!-- Unidad organizativa: grupo de investigación -->
+            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="OrgUnits/349890"><!-- Unidad organizativa: grupo de investigación -->
                <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#grupoDeInvestigacion</Type><!-- Tipo de dependencia -->
                <Acronym>GISMA</Acronym>
                <Name xml:lang="es">Grupo de investigación de Síntesis de Materiales Avanzados</Name>
                <ElectronicAddress>mailto:halarcon@uni.edu.pe</ElectronicAddress>
                <PartOf>
-                  <OrgUnit id="329897">
+                  <OrgUnit id="OrgUnits/329897">
                      <Name xml:lang="es">Universidad Nacional de Ingeniería</Name>
                      <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20169004359</Identifier><!-- RUC -->
                   </OrgUnit>
@@ -145,12 +145,12 @@
             <setSpec>perucris_cris_orgunits</setSpec>
          </header>
          <metadata>
-            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="349878"><!-- Unidad organizativa: línea de investigación -->
+            <OrgUnit xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="OrgUnits/349878"><!-- Unidad organizativa: línea de investigación -->
                <Type scheme="https://purl.org/pe-repo/concytec/tipoSubunidad">https://purl.org/pe-repo/concytec/tipoSubunidad#lineaDeInvestigacion</Type><!-- Tipo de dependencia -->
                <Name xml:lang="es">Ciencias de la tierra, medio ambiente y sostenibilidad</Name>
                <ElectronicAddress>mailto:ciencias_tierra@pucp.edu.pe</ElectronicAddress>
                <PartOf>
-                  <OrgUnit id="329897">
+                  <OrgUnit id="OrgUnits/329897">
                      <Name xml:lang="es">Pontificia Universidad Católica del Perú</Name>
                      <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20155945860</Identifier><!-- RUC -->
                      <Identifier type="https://w3id.org/cerif/vocab/IdentifierTypes#RORID">00013q465</Identifier><!-- ROR -->

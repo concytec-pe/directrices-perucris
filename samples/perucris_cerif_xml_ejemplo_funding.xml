@@ -10,7 +10,7 @@
             <setSpec>perucris_fundings</setSpec>
          </header>
          <metadata>
-            <Funding xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="612347">
+            <Funding xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="Fundings/612347">
                <Type xmlns="https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types">https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types#Grant</Type>
                <!--Grant-->
                <Acronym>COVID-19</Acronym>
@@ -23,14 +23,14 @@
                <Keyword xml:lang="es">Trabajadores</Keyword>
                <Keyword xml:lang="es">Aspectos piscoloógicos</Keyword>
                <Funder>
-                  <OrgUnit id="135871">
+                  <OrgUnit id="OrgUnits/135871">
                      <Acronym>FONDECYT</Acronym>
                      <Name xml:lang="es">Fondo Nacional de Desarrollo Científico, Tecnológico y de Innovación Tecnológica</Name>
                      <Identifier type="https://w3id.org/cerif/vocab/IdentifierTypes#FundRefID">http://dx.doi.org/10.13039/501100010751</Identifier>
                   </OrgUnit>
                </Funder>
                <PartOf>
-                  <Funding id="875244">
+                  <Funding id="Fundings/875244">
                      <Type xmlns="https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types">https://www.openaire.eu/cerif-profile/vocab/OpenAIRE_Funding_Types#FundingProgramme</Type><!--Funding Programme-->
                      <Name xml:lang="es">Proyectos Especiales: Respuesta al COVID-19</Name>
                   </Funding>

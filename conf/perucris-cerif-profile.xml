@@ -73,11 +73,11 @@
     </Entity>
     <Entity uri="https://w3id.org/cerif/model#PersonName" />
     <Entity uri="https://w3id.org/cerif/model#OrganisationUnit" leaveOut="Parts">
-      <!-- <IdentifiersFrom schemaLocation="includes/orgunit-identifiers.xsd">
+      <IdentifiersFrom schemaLocation="includes/orgunit-identifiers.xsd">
         <xs:annotation>
           <xs:documentation>The orgunit identifiers.</xs:documentation>
         </xs:annotation>
-      </IdentifiersFrom> -->
+      </IdentifiersFrom>
       <xs:element cflink:link="https://w3id.org/cerif/model#OrganisationUnit_Classification" maxOccurs="unbounded" minOccurs="0" name="Subject" type="cfGenericURIClassification__Type">
         <xs:annotation>
           <xs:documentation>La clasificación temática de la unidad organizativa o dependencia.</xs:documentation>
@@ -251,11 +251,11 @@
           <xs:documentation>The type of the patent (currently just one option)</xs:documentation>
         </xs:annotation>
       </Classification>
-      <!-- <IdentifiersFrom schemaLocation="includes/patent-identifiers.xsd">
+      <IdentifiersFrom schemaLocation="includes/patent-identifiers.xsd">
                 <xs:annotation>
                     <xs:documentation>The patent identifiers.</xs:documentation>
                 </xs:annotation>
-            </IdentifiersFrom> -->
+            </IdentifiersFrom>
       <Link name="Predecessor" minOccurs="0" maxOccurs="unbounded" cflink:link="https://w3id.org/cerif/model#ResultPatent_ResultPatent(https://w3id.org/cerif/vocab/InterPatentRelations#Predecessor):1" target="Patent">
         <xs:annotation>
           <xs:documentation>Patents that precede (i.e., have priority over) this patent</xs:documentation>

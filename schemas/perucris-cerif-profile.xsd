@@ -37,9 +37,21 @@
 </xs:annotation>
 </xs:include>
 
+	<xs:include schemaLocation="includes/orgunit-identifiers.xsd">
+<xs:annotation>
+<xs:documentation>The orgunit identifiers.</xs:documentation>
+</xs:annotation>
+</xs:include>
+
 	<xs:include schemaLocation="includes/publication-identifiers.xsd">
 <xs:annotation>
 <xs:documentation>The publication identifiers.</xs:documentation>
+</xs:annotation>
+</xs:include>
+
+	<xs:include schemaLocation="includes/patent-identifiers.xsd">
+<xs:annotation>
+<xs:documentation>The patent identifiers.</xs:documentation>
 </xs:annotation>
 </xs:include>
 
@@ -217,11 +229,7 @@ In the research information domain Organisation Units typically represents:
 							</xs:annotation>
 						</xs:element>
 						
-						<xs:element cflink:identifier="true" maxOccurs="unbounded" minOccurs="0" name="Identifier" type="cfGenericIdentifier__Type">
-							<xs:annotation>
-								<xs:documentation>An identifier of the organisation unit</xs:documentation>
-							</xs:annotation>
-						</xs:element>
+						<xs:group ref="OrgUnitIdentifiers__Group"/>
 
 						<!-- ... -->
 
@@ -952,11 +960,7 @@ Source: Wikipedia
 
 						<xs:element cflink:attribute="https://w3id.org/cerif/model#ResultPatent.PatentNumber" minOccurs="0" name="PatentNumber" type="cfString__Type"/>
 
-						<xs:element cflink:identifier="true" maxOccurs="unbounded" minOccurs="0" name="Identifier" type="cfGenericIdentifier__Type">
-							<xs:annotation>
-								<xs:documentation>An identifier of this patent</xs:documentation>
-							</xs:annotation>
-						</xs:element>
+						<xs:group ref="PatentIdentifiers__Group"/>
 
 						<xs:element cflink:container="ordered" minOccurs="0" name="Inventors">
 							<xs:annotation>

@@ -28,7 +28,7 @@
     </description>
 
     <description>
-      <Service xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="8123451"><!-- cris.example.org -->
+      <Service xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="Services/8123451"><!-- cris.example.org -->
         <Compatibility xmlns="https://purl.org/pe-repo/cerif-profile/vocab/PeruCRIS_Service_Compatibility">https://purl.org/pe-repo/cerif-profile/vocab/PeruCRIS_Service_Compatibility#1.0</Compatibility>
                 <Acronym>cris.example.org</Acronym>
         <Name xml:lang="es">Sistema CRIS de ejemplo</Name>
@@ -38,7 +38,7 @@
         <OAIPMHBaseURL>https://cris.example.org/oai/request</OAIPMHBaseURL>
 
         <Owner>
-          <OrgUnit id="58492"><!-- Institución de ejemplo -->
+          <OrgUnit id="OrgUnits/58492"><!-- Institución de ejemplo -->
             <Acronym>Institución de ejemplo</Acronym>
           </OrgUnit>
         </Owner>

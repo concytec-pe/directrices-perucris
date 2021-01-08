@@ -88,38 +88,38 @@
           <xs:documentation>Palabra clave o expresión clave que caracteriza la unidad organizativa.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="PostAddress" minOccurs="0" maxOccurs="1" cflink:entity="https://w3id.org/cerif/model#PostAddress">
+      <xs:element name="PostAddress" minOccurs="0" cflink:entity="https://w3id.org/cerif/model#PostAddress">
         <xs:annotation>
           <xs:documentation>El lugar de domicilio de la unidad organizativa o dependencia. </xs:documentation>
         </xs:annotation>
         <xs:complexType>
           <xs:sequence minOccurs="0">
-              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.AddressLine1" maxOccurs="1" minOccurs="0" name="StreetAddress" type="cfString__Type">
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.AddressLine1" minOccurs="0" name="StreetAddress" type="cfString__Type">
                 <xs:annotation>
                   <xs:documentation>El nombre de la calle y el número donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.CityTown" maxOccurs="1" minOccurs="0" name="AddressLocality" type="cfString__Type">
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.CityTown" minOccurs="0" name="AddressLocality" type="cfString__Type">
                 <xs:annotation>
                   <xs:documentation>El nombre del distrito donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element maxOccurs="1" minOccurs="0" name="AddressProvince" type="cfString__Type">
+              <xs:element minOccurs="0" name="AddressProvince" type="cfString__Type">
                 <xs:annotation>
                   <xs:documentation>El nombre de la provincia donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.StateOfCountry" maxOccurs="1" minOccurs="0" name="AddressRegion" type="cfString__Type">
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.StateOfCountry" minOccurs="0" name="AddressRegion" type="cfString__Type">
                 <xs:annotation>
                   <xs:documentation>El nombre del departamento donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.PostCode" maxOccurs="1" minOccurs="0" name="PostalCode" type="cfString__Type">
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.PostCode" minOccurs="0" name="PostalCode" type="cfString__Type">
                 <xs:annotation>
                   <xs:documentation>El código postal donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.CountryCode" maxOccurs="1" minOccurs="0" name="AddressCountry" type="cfString__Type">
+              <xs:element cflink:link="https://w3id.org/cerif/model#PostAddress.CountryCode" minOccurs="0" name="AddressCountry" type="cfString__Type">
                 <xs:annotation>
                   <xs:documentation>El código ISO 3166 (2 caracteres) del país donde se encuentra ubicada la unidad organizativa o dependencia.</xs:documentation>
                 </xs:annotation>
@@ -127,7 +127,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element cflink:link="https://w3id.org/cerif/model#OrganisationUnit_Classification(https://purl.org/pe-repo/inei/ubigeo)" maxOccurs="1" minOccurs="0" name="UbiGeo" type="cfGenericURIClassification__Type">
+      <xs:element cflink:link="https://w3id.org/cerif/model#OrganisationUnit_Classification(https://purl.org/pe-repo/inei/ubigeo)" minOccurs="0" name="UbiGeo" type="cfGenericURIClassification__Type">
         <xs:annotation>
           <xs:documentation>La localización de la unidad organizativa o dependencia, según UbiGeo de INEI.</xs:documentation>
         </xs:annotation>
@@ -170,7 +170,7 @@
     </Entity>
 
     <Entity uri="https://w3id.org/cerif/model#Funding" leaveOut="Originated Supports">
-      <Classification kind="Type" schema="vocabularies/openaire_funding_types.xsd" minOccurs="1" maxOccurs="1">
+      <Classification kind="Type" schema="vocabularies/openaire_funding_types.xsd" minOccurs="1">
         <xs:annotation>
           <xs:documentation>The type of the funding</xs:documentation>
         </xs:annotation>
@@ -202,12 +202,12 @@
     </Entity>
 
     <Entity uri="https://w3id.org/cerif/model#ResultPublication" leaveOut="Series TotalPages ReferencedBy Parts">
-      <Classification kind="Type" schema="vocabularies/coar_publication_types.xsd" minOccurs="1" maxOccurs="1">
+      <Classification kind="Type" schema="vocabularies/coar_publication_types.xsd" minOccurs="1">
         <xs:annotation>
           <xs:documentation>The type of the publication</xs:documentation>
         </xs:annotation>
       </Classification>
-      <Classification kind="Access" schema="vocabularies/coar_accessrights.xsd" minOccurs="1" maxOccurs="1">
+      <Classification kind="Access" schema="vocabularies/coar_accessrights.xsd" minOccurs="1">
         <xs:annotation>
           <xs:documentation>The open access type of the publication</xs:documentation>
         </xs:annotation>
@@ -225,7 +225,7 @@
      </Entity>
 
     <Entity uri="https://w3id.org/cerif/model#ResultProduct" leaveOut="AlternateName ReferencedBy Parts">
-      <Classification kind="Type" schema="vocabularies/coar_product_types.xsd" minOccurs="1" maxOccurs="1">
+      <Classification kind="Type" schema="vocabularies/coar_product_types.xsd" minOccurs="1">
         <xs:annotation>
           <xs:documentation>The type of the resulting product (other than publication or patent)</xs:documentation>
         </xs:annotation>
@@ -248,7 +248,7 @@
     </Entity>
 
     <Entity uri="https://w3id.org/cerif/model#ResultPatent" leaveOut="ReferencedBy Parts">
-      <Classification kind="Type" schema="vocabularies/coar_patent_types.xsd" minOccurs="1" maxOccurs="1">
+      <Classification kind="Type" schema="vocabularies/coar_patent_types.xsd" minOccurs="1">
         <xs:annotation>
           <xs:documentation>The type of the patent (currently just one option)</xs:documentation>
         </xs:annotation>
@@ -269,6 +269,66 @@
       <xs:element name="Owner" type="cfLinkWithDisplayNameToPersonOrOrgUnit__Type" minOccurs="0" maxOccurs="unbounded" cflink:link="https://w3id.org/cerif/model#Person_Service(https://w3id.org/cerif/vocab/PersonResearchInfrastructureRoles#Owner) https://w3id.org/cerif/model#OrganisationUnit_Service(https://w3id.org/cerif/vocab/OrganisationResearchInfrastructureRoles#Owner)">
         <xs:annotation>
           <xs:documentation>The owner of the piece of equipment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element cflink:link="https://w3id.org/cerif/model#Equipment_Classification" maxOccurs="unbounded" minOccurs="0" name="Subject" type="cfGenericURIClassification__Type">
+        <xs:annotation>
+          <xs:documentation>La clasificación temática del equipamiento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element cflink:link="https://w3id.org/cerif/model#OrganisationUnit_Equipment(https://purl.org/pe-repo/concytec/terminos#lineaDeInvestigacion)" maxOccurs="unbounded" minOccurs="0" name="ResearchLine" type="cfLinkWithDisplayNameToOrgUnit__Type">
+        <xs:annotation>
+          <xs:documentation>Línea de investigación aprobada o declarada institucionalmente, asociada a este equipamiento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element cflink:container="unordered" maxOccurs="unbounded" minOccurs="0" name="Funded">
+        <xs:annotation>
+          <xs:documentation>Referencia al financiamiento con el cual se adquirió este equipamiento.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element cflink:link="https://w3id.org/cerif/model#OrganisationUnit_Equipment(https://w3id.org/cerif/vocab/OrganisationProjectEngagements#Funder)" minOccurs="0" name="By" type="cfLinkWithDisplayNameToPersonOrOrgUnit__Type">
+              <xs:annotation>
+                <xs:documentation>Entidad que financió el equipamiento.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            
+            <xs:element cflink:link="https://w3id.org/cerif/model#Equipment_Funding(https://w3id.org/cerif/vocab/ProjectFundingRelations#Support)" minOccurs="0" name="As">
+              <xs:annotation>
+                <xs:documentation>El dispositivo específico (nombre) del financiamiento (subvención, adjudicación, contrato) del que proviene el equipamiento y su código.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="cfLink__BaseType">
+                    <xs:sequence>
+                      <xs:element ref="Funding"/>
+                    </xs:sequence>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attributeGroup ref="cfExtension__AttributeGroup"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ManufacturingCountry" type="cfString__Type">
+        <xs:annotation>
+          <xs:documentation>El código ISO 3166 (2 caracteres) del país de fabricación del equipamiento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ManufacturingDate" type="cfGenericDateTime__Type">
+        <xs:annotation>
+          <xs:documentation>La fecha de fabricación del equipamiento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AcquisitionDate" type="cfGenericDateTime__Type">
+        <xs:annotation>
+          <xs:documentation>La fecha de adquisición del equipamiento.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AcquisitionAmount" type="cfAmount__Type">
+        <xs:annotation>
+          <xs:documentation>El monto de adquisición del equipamiento y su moneda.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </Entity>

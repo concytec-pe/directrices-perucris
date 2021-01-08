@@ -5,7 +5,7 @@
    <ListRecords>
       <record>
          <header>
-            <identifier>oai:cris.example.org:987654</identifier>
+            <identifier>oai:cris.example.org:Equipments/987654</identifier>
             <datestamp>2021-01-05T14:00:00Z</datestamp>
             <setSpec>perucris_equipments</setSpec>
          </header>

@@ -6,17 +6,17 @@
       Este trabajo se deriva de las OpenAIRE Guidelines for CRIS Managers 1.1 (http://openaire-guidelines-for-cris-managers.readthedocs.io/en/latest/index.html), publicadas bajo una licencia Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/).. 
       Este trabajo tiene la licencia Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/).</xs:documentation>
 <xs:appinfo>
-         
-         <sch:ns xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" prefix="pecf" uri="https://purl.org/pe-repo/cerif-profile/1.0/"/>
-      </xs:appinfo>
+      
+      <sch:ns xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" prefix="pecf" uri="https://purl.org/pe-repo/cerif-profile/1.0/"/>
+    </xs:appinfo>
 <xs:appinfo>
-         <sch:pattern xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+      <sch:pattern xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
 <sch:title>Occurrence of "uri" implies an OAMandate is mandated</sch:title>
 <sch:rule context="pecf:OAMandate">
 <sch:report test="@uri and not ( @mandated = 'true' )">If the URI of an Open Access policy is given, "mandated" must be set true</sch:report>
-            </sch:rule>
-         </sch:pattern>
-      </xs:appinfo>
+        </sch:rule>
+      </sch:pattern>
+    </xs:appinfo>
 </xs:annotation>
 
 	
@@ -165,6 +165,12 @@ One Person typically has many of these relationships.
 </xs:extension>
 </xs:complexContent>
 </xs:complexType>
+</xs:element>
+
+<xs:element cflink:identifier="true" maxOccurs="unbounded" minOccurs="0" name="Identifier" type="cfGenericIdentifier__Type">
+<xs:annotation>
+<xs:documentation>An identifier of the person</xs:documentation>
+</xs:annotation>
 </xs:element>
 
 <xs:group ref="__TheRestGroup"/>
@@ -1024,6 +1030,14 @@ Source: Wikipedia
 </xs:complexContent>
 </xs:complexType>
 </xs:element>
+
+<xs:element cflink:link="https://w3id.org/cerif/model#ResultPatent_Classification" maxOccurs="unbounded" minOccurs="0" name="Type" type="cfGenericURIClassification__Type">
+<xs:annotation>
+<xs:documentation>The type of the patent</xs:documentation>
+</xs:annotation>
+</xs:element>
+
+<xs:element cflink:identifier="true" cflink:link="https://w3id.org/cerif/vocab/IdentifierTypes#URL" minOccurs="0" name="URL" type="cfString__Type"/>
 
 <xs:group ref="__TheRestGroup"/>
 						

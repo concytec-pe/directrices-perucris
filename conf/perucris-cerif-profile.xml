@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CERIF-profile xmlns="https://w3id.org/cerif/profile" xmlns:cflink="https://w3id.org/cerif/annotations#" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://w3id.org/cerif/profile ../../CERIF-TG-Tools/CERIF-Model-Tools/src/main/resources/xsd/cerif-profile-definition.xsd">
+<CERIF-profile xmlns="https://w3id.org/cerif/profile" xmlns:cflink="https://w3id.org/cerif/annotations#" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datacite="http://datacite.org/schema/kernel-4" xsi:schemaLocation="https://w3id.org/cerif/profile ../../CERIF-TG-Tools/CERIF-Model-Tools/src/main/resources/xsd/cerif-profile-definition.xsd">
   <xs:annotation>
     <xs:documentation>Esquema XML Schema del perfil CERIF PerúCRIS 1.0, 
       material complementario para las "Directrices de la Red Nacional de Información en Ciencia, Tecnología e Innovación Tecnológica para administradores de sistemas de gestión de información científica" versión 1.0.
@@ -170,6 +170,11 @@
         </xs:annotation>
       </xs:element>
       <xs:element cflink:identifier="true" cflink:link="https://w3id.org/cerif/vocab/IdentifierTypes#URL" minOccurs="0" name="URL" type="cfString__Type"/>
+      <xs:element xmlns="http://datacite.org/schema/kernel-4" minOccurs="0" ref="geoLocations">
+        <xs:annotation>
+          <xs:documentation>El ámbito geográfico (región espacial o nombre del lugar) en el cual se aplica el proyecto.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </Entity>
     <Entity uri="https://w3id.org/cerif/model#Funding" leaveOut="Originated Supports">
       <Classification kind="Type" schema="vocabularies/openaire_funding_types.xsd" minOccurs="1">
@@ -356,5 +361,8 @@
       </xs:complexContent>
     </xs:complexType>
   </xs:redefine>
+
+  <xs:import namespace="http://datacite.org/schema/kernel-4"
+    schemaLocation="includes/datacite-v4.xsd"/>
 
 </CERIF-profile>

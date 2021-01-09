@@ -127,13 +127,24 @@
             </OrgUnit>
           </ResearchLine>
           <URL>http://proyectoscti.concytec.gob.pe/index.php/buscador/ficha_proyecto/2359</URL>
-<!--          <geoLocation>
-            <geoLocationPoint>
-              <pointLatitude>-12.0611497</pointLatitude>
-              <pointLongitude>-77.0225487</pointLongitude>
-            </geoLocationPoint>
-            <geoLocationPlace>Hospital Nacional Guillermo Almenara Irigoyen</geoLocationPlace>
-          </geoLocation> -->
+          <geoLocations xmlns="http://datacite.org/schema/kernel-4">
+            <geoLocation>
+              <geoLocationPoint>
+                <pointLatitude>-12.0611497</pointLatitude>
+                <pointLongitude>-77.0225487</pointLongitude>
+              </geoLocationPoint>
+              <geoLocationPlace>Hospital Nacional Guillermo Almenara Irigoyen</geoLocationPlace>
+            </geoLocation>
+            <geoLocation>
+              <geoLocationBox>
+                <westBoundLongitude>-71.032</westBoundLongitude>
+                <eastBoundLongitude>-68.211</eastBoundLongitude>
+                <southBoundLatitude>41.090</southBoundLatitude>
+                <northBoundLatitude>42.893</northBoundLatitude>
+              </geoLocationBox>
+            </geoLocation>
+          </geoLocations>
+
         </Project>
       </metadata>
     </record>

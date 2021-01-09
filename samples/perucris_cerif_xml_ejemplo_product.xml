@@ -10,7 +10,7 @@
         <setSpec>perucris_products</setSpec>
       </header>
       <metadata>
-        <Product xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="Products/Products/7123451">
+        <Product xmlns="https://purl.org/pe-repo/cerif-profile/1.0/" id="Products/7123451">
           <Type xmlns="https://www.openaire.eu/cerif-profile/vocab/COAR_Product_Types">http://purl.org/coar/resource_type/c_ddb1</Type><!-- Dataset -->
           <Language>es</Language>
           <Name xml:lang="es">Estudio sobre Acoso Sexual Callejero en Lima y Callao 2019</Name>

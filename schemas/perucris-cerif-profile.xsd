@@ -63,6 +63,16 @@
 
 	<xs:import namespace="http://purl.org/coar/access_right" schemaLocation="vocabularies/coar_accessrights.xsd"/>
 
+<xs:redefine schemaLocation="./perucris-cerif-profile.xsd">
+<xs:complexType name="cfLinkWithDisplayNameToPersonWithAffiliations__Type">
+<xs:complexContent>
+<xs:extension base="cfLinkWithDisplayNameToPersonWithAffiliations__Type">
+<xs:attribute name="type" type="xs:anyURI"/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+</xs:redefine>
+
 <xs:include schemaLocation="./includes/cerif-commons.xsd">
 		<xs:annotation>
 			<xs:documentation>The common building blocks for any CERIF XML Schema.</xs:documentation>
@@ -565,6 +575,14 @@ The Project entity only captures details of the project scope and plan. Informat
 <xs:attributeGroup ref="cfExtension__AttributeGroup"/>
 </xs:complexType>
 </xs:element>
+
+<xs:element cflink:link="https://w3id.org/cerif/model#Project_OrganisationUnit(https://purl.org/pe-repo/concytec/terminos#lineaDeInvestigacion)" maxOccurs="unbounded" minOccurs="0" name="ResearchLine" type="cfLinkWithDisplayNameToOrgUnit__Type">
+<xs:annotation>
+<xs:documentation>La línea de investigación aprobada o declarada institucionalmente, a la que corresponde el proyecto.</xs:documentation>
+</xs:annotation>
+</xs:element>
+
+<xs:element cflink:identifier="true" cflink:link="https://w3id.org/cerif/vocab/IdentifierTypes#URL" minOccurs="0" name="URL" type="cfString__Type"/>
 
 <xs:group ref="__TheRestGroup"/>
 						

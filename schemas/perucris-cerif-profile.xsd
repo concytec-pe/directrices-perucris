@@ -37,12 +37,6 @@
 </xs:annotation>
 </xs:include>
 
-	<xs:include schemaLocation="includes/orgunit-identifiers.xsd">
-<xs:annotation>
-<xs:documentation>The orgunit identifiers.</xs:documentation>
-</xs:annotation>
-</xs:include>
-
 	<xs:include schemaLocation="includes/publication-identifiers.xsd">
 <xs:annotation>
 <xs:documentation>The publication identifiers.</xs:documentation>
@@ -74,6 +68,8 @@
 </xs:redefine>
 
 <xs:import namespace="http://datacite.org/schema/kernel-4" schemaLocation="includes/datacite-v4.xsd"/>
+
+<xs:import namespace="http://purl.org/coar/version" schemaLocation="vocabularies/coar_versions.xsd"/>
 
 <xs:include schemaLocation="./includes/cerif-commons.xsd">
 		<xs:annotation>
@@ -241,7 +237,11 @@ In the research information domain Organisation Units typically represents:
 							</xs:annotation>
 						</xs:element>
 						
-						<xs:group ref="OrgUnitIdentifiers__Group"/>
+						<xs:element cflink:identifier="true" maxOccurs="unbounded" minOccurs="0" name="Identifier" type="cfGenericIdentifier__Type">
+							<xs:annotation>
+								<xs:documentation>An identifier of the organisation unit</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 
 						<!-- ... -->
 
@@ -334,7 +334,7 @@ In the research information domain Organisation Units typically represents:
 </xs:annotation>
 </xs:element>
 
-<xs:element cflink:attribute="https://w3id.org/cerif/model#OrganisationUnit.Description" maxOccurs="unbounded" minOccurs="0" name="Description" type="cfMLangString__Type">
+<xs:element maxOccurs="unbounded" minOccurs="0" name="Description" type="cfMLangString__Type">
 <xs:annotation>
 <xs:documentation>Información que describe o caracteriza a esta Unidad Organizativa o dependencia.</xs:documentation>
 </xs:annotation>
@@ -941,6 +941,29 @@ This entity typically represents the granularity level of a single published ite
 </xs:annotation>
 </xs:element>
 
+<xs:element xmlns:ns4="http://purl.org/coar/version" cflink:link="https://w3id.org/cerif/model#ResultPublication_Classification(http://purl.org/coar/version)" minOccurs="0" ref="ns4:Version">
+<xs:annotation>
+<xs:documentation>The status in the publication process of journal articles.</xs:documentation>
+</xs:annotation>
+</xs:element>
+
+<xs:element cflink:link="https://w3id.org/cerif/model#ResultPublication_Classification" maxOccurs="unbounded" minOccurs="0" name="Type" type="cfGenericURIClassification__Type">
+<xs:annotation>
+<xs:documentation>The type of the publication</xs:documentation>
+</xs:annotation>
+</xs:element>
+
+<xs:element cflink:container="ordered" minOccurs="0" name="Advisors">
+<xs:annotation>
+<xs:documentation>La persona responsable de la asesoría de la investigación.</xs:documentation>
+</xs:annotation>
+<xs:complexType>
+<xs:sequence>
+<xs:element cflink:link="https://w3id.org/cerif/model#Person_ResultPublication(https://purl.org/pe-repo/concytec/terminos#asesor)" maxOccurs="unbounded" minOccurs="0" name="Advisor" type="cfLinkWithDisplayNameToPersonWithAffiliations__Type"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
 <xs:group ref="__TheRestGroup"/>
 						
 					</xs:sequence>
@@ -1066,8 +1089,6 @@ Source: Wikipedia
 <xs:documentation>The type of the patent</xs:documentation>
 </xs:annotation>
 </xs:element>
-
-<xs:element cflink:identifier="true" cflink:link="https://w3id.org/cerif/vocab/IdentifierTypes#URL" minOccurs="0" name="URL" type="cfString__Type"/>
 
 <xs:group ref="__TheRestGroup"/>
 						
@@ -1370,7 +1391,7 @@ Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=equipment
 						
 						<xs:element xmlns="https://purl.org/pe-repo/cerif-profile/vocab/PeruCRIS_Service_Compatibility" cflink:link="https://w3id.org/cerif/model#Service_Classification" maxOccurs="unbounded" minOccurs="0" ref="Compatibility">
 <xs:annotation>
-<xs:documentation>PeruCRIS compatibility of the CRIS</xs:documentation>
+<xs:documentation>#PeruCRIS compatibility of the CRIS</xs:documentation>
 </xs:annotation>
 </xs:element>
 						

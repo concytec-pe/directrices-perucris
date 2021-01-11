@@ -24,6 +24,7 @@
             </OrgUnit>
           </Issuer>
           <PatentNumber>000056-2010</PatentNumber>
+          <URL>https://servicio.indecopi.gob.pe/portalSAE/Expedientes/consultaOIN.jsp</URL>
           <Inventors>
             <Inventor>
               <Person id="Persons/2018967">
@@ -89,7 +90,6 @@
             </Patent>
           </Predecessor>
           <Type scheme="https://purl.org/pe-repo/indecopi/propiedadIntelectual">https://purl.org/pe-repo/indecopi/propiedadIntelectual#patenteDeInvencion</Type><!-- Clase de patente -->
-          <URL>https://servicio.indecopi.gob.pe/portalSAE/Expedientes/consultaOIN.jsp</URL>
         </Patent>
       </metadata>
     </record>

@@ -331,8 +331,8 @@
         </xs:complexType>
       </xs:element>
 
-      <!-- TODO: Degree or Title obtained with publication 
-        - InSupportOf
+      <!-- Degree or Title obtained with publication 
+        - InSupportOf (missing Qualification_Publication link in CERIF)
           - Qualification
             - Title
             - Type (scheme: https://purl.org/pe-repo/renati/level)
@@ -340,6 +340,78 @@
             - Grantor (missing Qualification_OrgUnit link in CERIF)
             - Jurors (Person_Qualification)
       -->
+      <xs:element minOccurs="0" name="InSupportOf"><!-- https://schema.org/inSupportOf -->
+        <xs:annotation>
+          <xs:documentation>Candidature(s) for an academic degree or professional qualification supported by the publication (thesis or dissertation).</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+          
+            <!-- missing Qualification_Publication link in CERIF -->
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="Qualification">
+              <xs:complexType>
+                <xs:sequence>
+                
+                  <!-- Title -->
+                  <xs:element cflink:link="https://w3id.org/cerif/model#Qualification.Title" minOccurs="0" name="Title" type="cfString__Type">
+                    <xs:annotation>
+                      <xs:documentation>Nombre del grado académico o título profesional.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  
+                  <!-- Type -->
+                  <xs:element cflink:link="https://w3id.org/cerif/model#Qualification_Classification" minOccurs="0" name="Type" type="cfGenericURIClassification__Type">
+                    <xs:annotation>
+                      <xs:documentation>El nivel o tipo del grado académico y/o título profesional.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  
+                  <!-- Discipline -->
+                  <xs:element cflink:link="https://w3id.org/cerif/model#Qualification_Classification" minOccurs="0" name="Discipline">
+                    <xs:annotation>
+                      <xs:documentation>El código del programa de educación superior que condujo a la obtención del grado académico y/o título profesional.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                          <xs:attribute name="scheme" type="xs:anyURI" default="https://purl.org/pe-repo/inei/cpesutpt" />
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                  
+                  <!-- Grantor: missing Qualification_OrgUnit in CERIF -->
+                  <xs:element minOccurs="0" name="Grantor" type="cfLinkWithDisplayNameToOrgUnit__Type">
+                    <xs:annotation>
+                      <xs:documentation>Institución que ha otorgado el grado académico y/o título profesional.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  
+                  <!-- Jurors -->
+                  <xs:element minOccurs="0" name="Jurors">
+                    <xs:annotation>
+                      <xs:documentation>Integrantes del jurado evaluador del trabajo académico conducente al grado académico y/o título profesional.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element cflink:link="https://w3id.org/cerif/model#Person_Qualification(https://purl.org/pe-repo/concytec/terminos#jurado)" maxOccurs="unbounded" minOccurs="0" name="Juror" type="cfLinkWithDisplayNameToPersonWithAffiliations__Type"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <!-- Discipline -->
+      <xs:element minOccurs="0" name="Discipline" type="cfString__Type">
+        <xs:annotation>
+          <xs:documentation>La disciplina de la calificación.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
 
     </Entity>
 
@@ -499,9 +571,12 @@
     </Entity>
     <Entity uri="https://w3id.org/cerif/model#Classification" />
     <Entity uri="https://w3id.org/cerif/model#ClassificationScheme" />
-  </Entities>
+    
+   
+   </Entities>
   <xs:import namespace="http://purl.org/coar/access_right" schemaLocation="vocabularies/coar_accessrights.xsd" />
   
+
   <!-- Permitir que Project/Team/Member pueda tener un atributo type -->
   <xs:redefine schemaLocation="./perucris-cerif-profile.xsd">
     <xs:complexType name="cfLinkWithDisplayNameToPersonWithAffiliations__Type">

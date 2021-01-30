@@ -42,6 +42,18 @@
                 <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20131257750</Identifier>
               </OrgUnit>
             </Contractor>
+            <InkindContributor>
+                <OrgUnit id="OrgUnits/878401">
+                    <Name xml:lang="en">Instituto Prame</Name>
+                    <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20601884777</Identifier>
+                </OrgUnit>
+            </InkindContributor>
+            <Member>
+                <OrgUnit id="OrgUnits/148864">
+                    <Name xml:lang="es">Instituto Nacional de Salud Preventiva</Name>
+                    <Identifier type="https://purl.org/pe-repo/concytec/terminos#ruc">20504846286</Identifier>
+                </OrgUnit>
+            </Member>
           </Consortium>
           <Team>
             <PrincipalInvestigator>
